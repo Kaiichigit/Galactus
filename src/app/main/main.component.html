@@ -1,0 +1,32 @@
+<div class="top-bar">
+  <button class="left-button" (click)="toggleMenu()" (click)="ngOnInit()"  >
+    <img src="../../assets/true.png" >
+  </button>
+  <ul class="right-list">
+    <li>Settings</li>
+    <li>Options</li>
+    <li>User</li>
+  </ul>
+</div>
+
+<div class="main-content">
+<nav class="side-bar" *ngIf="!isMenuOpen" >
+        <ul  class="menu-list" >
+            <li *ngFor="let r of responseData"  (click)="showIframe('https://codingpotions.com/angular-router/')">{{ r.nombreMenu }}</li>
+            <li (click)="showIframe('https://www.knowi.com/blog/mongodb-vs-sql/#:~:text=MongoDB%20does%2C%20however%2C%20support%20document,from%20multiple%20sources%20of%20data.')">Another</li>
+        </ul>
+</nav>
+
+<mat-tab-group class="content" >
+    <mat-tab *ngFor="let tab of tabs; let i = index">
+      <ng-template mat-tab-label>
+        <span>{{ tab.title }}</span>
+        <button mat-icon-button (click)="closeTab(i)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </ng-template>
+      <iframe [src]="iframeSrc" frameborder="0"></iframe>
+    </mat-tab>
+  </mat-tab-group>
+  <button mat-raised-button color="primary" (click)="addTab()" class="new-tab-button">New Tab</button>
+</div>

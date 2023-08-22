@@ -1,0 +1,154 @@
+body {
+  display: grid;
+  grid-template-columns: 120px 100%; /* Left side and right side */
+  grid-template-rows: 100vh 100%; /* Top bar and remaining content */
+  grid-gap: 5px;
+  gap: 0px; /* Adjust as needed */
+  height: 100vh; /* Adjust to fill viewport height */
+}
+
+.top-bar {
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
+
+.left-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-block;
+}
+
+.left-button img {
+  width: 80px; 
+  height: auto;
+}
+
+.right-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.right-list li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu-list li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.side-bar {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #f0f0f0;
+  height: 100%; 
+  overflow-y: auto; 
+  padding: 20px; 
+}
+
+.main-content {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-gap: 5px; 
+  padding: 20px; 
+}
+
+.new-tab-button {
+  grid-column: 2;
+  grid-row: 1;
+  float: right; 
+  width: 60px;
+  height: 45px;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  z-index: 3;
+}
+
+/* 
+.side-bar {
+  width: 100px;
+  background-color: #333; 
+  position: fixed;
+  overflow-y: auto;
+  box-shadow: 2px 0px 5px rgba(61, 59, 59, 0.3);
+  transition: height 0.3s, opacity 0.3s;
+  bottom: 0px;
+  top: 0px;
+}
+
+.main-content {
+  margin-left: 100px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.hamburger-button {
+  display: block;
+  margin: 10px auto; 
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  max-height: calc(100vh - 160px); 
+  overflow-y: auto;
+}
+
+.menu-list li {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+ul {
+    overflow: auto;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    z-index: 3;
+}
+
+.close-button {
+  float: right;
+}
+
+.mat-mdc-tab-header {
+  width: 50%;
+}
+
+@media (max-width: 650px) {
+
+  .side-bar {
+    left: -250px; 
+    opacity: 0; 
+  }
+  .main-content {
+    margin-left: 0;
+  }
+} */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
